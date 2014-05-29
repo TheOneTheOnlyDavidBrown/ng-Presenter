@@ -1,0 +1,14 @@
+[
+  {
+    "title":"<span style='color:red'>go to store</span>",
+    "text":"slide text for first"
+  },
+  {
+    "title":"make dinner",
+    "text":"slide text for<br>second"
+  },
+  {
+    "title":"learn angular",
+    "text":"slide text for third"
+  }
+]

@@ -1,0 +1,1 @@
+var myApp = angular.module('app',['ngSanitize','ngAnimate','textAngular','LocalStorageModule', 'ui']);

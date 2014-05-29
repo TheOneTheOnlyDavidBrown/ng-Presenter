@@ -1,0 +1,22 @@
+
+<div ng-repeat="slide in slides" ng-show="slide.show" class="slide slide-show-hide" ng-animate="'animate'">
+<div ng-style="floatStyle">
+  <div ng-bind-html="slide.title|unsafe" class="title"> </div>
+  <div ng-bind-html="slide.text|unsafe" class="content"></div>
+</div>
+<div style="float:left;width:500px" ng-show="editMode">
+  <textarea ui-tinymce id="tinymce1-{{slide.order}}" ng-model="slide.title"></textarea>
+  <textarea ui-tinymce id="tinymce2-{{slide.order}}" ng-model="slide.text"></textarea>
+
+</div>full: {{fullScreen}}
+
+<div class="navButtons">
+  <span ng-click="back()">Back </span>&nbsp;&nbsp;&nbsp;
+  <span ng-click="enterEditMode()" ng-show="!editMode">Edit &nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="exitEditMode()" ng-show="editMode">Save &nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="forward()"> Forward &nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="add()"> New Slide &nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="delete()" ng-show="editMode"> Delete Slide &nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="moveBack()" ng-show="editMode"> Move Slide Back&nbsp;&nbsp;&nbsp;</span>
+  <span ng-click="moveForward()" ng-show="editMode"> Move Slide Forward&nbsp;&nbsp;&nbsp;</span>
+</div>
